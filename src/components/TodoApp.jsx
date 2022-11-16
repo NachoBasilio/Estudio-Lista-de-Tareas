@@ -18,6 +18,7 @@ export default function TodoApp() {
     }
     setTodos([...todos, newTodo])
     console.log(todos)
+    setTodoTitle("")
   }
 
   function changeState(id, text){

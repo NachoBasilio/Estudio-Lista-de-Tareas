@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export function Todo({item}) {
-  return (
-    <>
-        <div>{item.title}</div>    
-    </>
+const [isEdit, setIsEdit] = useState(false)
+
+    return (
+    <div>
+        <p>{item.title}</p> 
+        <button onClick={()=>{setIsEdit(true)}}>Edit</button>
+        <button>Delete</button>   
+    </div>
   )
 }

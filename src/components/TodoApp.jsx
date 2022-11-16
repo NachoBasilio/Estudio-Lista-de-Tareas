@@ -14,12 +14,23 @@ export default function TodoApp() {
     
     const newTodo = {
       id: crypto.randomUUID(),
-      title: todoTitle,
+      title: todoTitle
     }
     setTodos([...todos, newTodo])
     console.log(todos)
   }
 
+  function changeState(id, text){
+    const aux = todos.findIndex((todo)=>todo.id === id)
+    todos[aux].title = text
+    setTodos([...todos])
+  }
+
+  function deteleItem(id){
+    const aux = todos.findIndex((todo)=>todo.id === id)
+    todos.splice(aux, 1)
+    setTodos([...todos])
+  }
   return (
     <>
     <div className='todoContainer'>
@@ -28,7 +39,7 @@ export default function TodoApp() {
         <input className='buttonCreate' type="submit" value="Crear" />
       </form>
       <div className='todosContainer'>
-        {todos.map(todo=>(<Todo key={todo.id}item={todo}/>))}
+        {todos.map(todo=>(<Todo key={todo.id} item={todo} onUpdate={changeState} onDelete={deteleItem}/>))}
       </div>
     </div>
     </>

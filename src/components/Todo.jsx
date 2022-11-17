@@ -3,7 +3,7 @@ import React, { useState } from "react"
 export function Todo({item, onUpdate, onDelete}) {
 const [isEdit, setIsEdit] = useState(false)
 
-//Componente editar
+
 function FormEdit(){
     const [newValue, setNewValue] = useState(item.title)
     function handleSubmit(e){
@@ -25,7 +25,7 @@ function FormEdit(){
     )
 }
 
-//Componente normal
+
 function TodoElement() {
     return (
     <div className="todoInfo">

@@ -1,0 +1,13 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#root{
+    margin-top: 200px;
+    background-color: #FCD4E2;
+    padding: 5px;
+    border-radius: 5%;
+    width: 80%;
+}

@@ -1,13 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column; 
+    font-family: 'Poppins', sans-serif;
 }
 
 #root{
-    margin-top: 200px;
+    margin-top: 50px;
     background-color: #FCD4E2;
     padding: 5px;
     border-radius: 5%;
     width: 80%;
+}
+@media (min-width: 400px) {
+    #root{
+        width: 60%;
+    }
+}
+
+@media (min-width: 600px) {
+    #root{
+        width: 50%;
+    }
+}
+
+@media (min-width: 800px) {
+    #root{
+        width: 30%;
+    }
 }

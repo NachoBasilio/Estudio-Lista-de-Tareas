@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import "../style/Todo.css"
 
 export function Todo({item, onUpdate, onDelete}) {
 const [isEdit, setIsEdit] = useState(false)
@@ -29,11 +30,13 @@ function FormEdit(){
 function TodoElement() {
     return (
     <div className="todoInfo">
-        <p>{item.title}</p> 
-        <button onClick={()=>{setIsEdit(true)}}>Edit</button>
-        <button onClick={(e)=>{
-            onDelete(item.id)
-        }}>Delete</button>   
+        <p className="todoTexto">{item.title}</p> 
+        <div>
+            <button className="botonEditar" onClick={()=>{setIsEdit(true)}}>Edit</button>
+            <button className="botonEliminar" onClick={(e)=>{
+                onDelete(item.id)
+            }}>Delete</button> 
+        </div>
     </div>
     )
 }

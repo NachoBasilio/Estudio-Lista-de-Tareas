@@ -33,6 +33,7 @@ export default function TodoApp() {
     todos.splice(aux, 1)
     setTodos([...todos])
   }
+  
   return (
     <>
     <div className='todoContainer'>

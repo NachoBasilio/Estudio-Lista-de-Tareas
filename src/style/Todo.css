@@ -28,4 +28,16 @@
     text-shadow: 0 1px #000;
 }
 
+.button{
+    background-color: #FAF6C8;
+    border: none;
+    color: #FAAFC9;
+    text-shadow: 0 1px #000;
+}
 
+.todoUpdate{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
